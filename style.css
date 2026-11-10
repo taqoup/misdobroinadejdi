@@ -34,3 +34,30 @@ footer p{font-size:14px;line-height:1.2;font-style:italic;margin:5px auto 8px;ma
 @media(max-height:580px){.hero .divider{display:none}h1{font-size:36px;margin-top:3px}.eyebrow{margin-bottom:4px}.reviews{padding-top:4px}h2{font-size:25px;margin-bottom:5px}.intro{font-size:13px;margin-bottom:8px}.review-link{min-height:48px;padding:7px 12px}footer{margin-top:8px}footer p{font-size:13px;margin:4px auto 6px}}
 @media(max-width:350px){.page{padding-left:14px;padding-right:14px}.review-link{font-size:17px}.intro{max-width:260px}}
 @media(orientation:landscape) and (max-height:440px){.page{height:auto;min-height:100svh}.hero{min-height:160px}}
+
+/* Artwork coordinates match the supplied placement guide. */
+.page{width:min(100%,46.15385svh);max-width:520px;min-height:440px;padding:0}
+.page:before{background:url('./assets/cape-final.webp') center/100% 100% no-repeat}
+.page:after{display:none}
+.hero{position:absolute;top:6%;left:12%;width:61%;height:20%;min-height:0;display:flex;justify-content:center}
+.hero .divider,.hero .flourish,.voyage{display:none}
+.eyebrow{font-size:clamp(9px,1.55svh,12px);letter-spacing:.1em;margin:0 0 9px;white-space:nowrap}
+h1{font-size:clamp(29px,5.3svh,43px);line-height:.95;margin:0}
+.reviews{position:absolute;top:64%;left:9%;width:82%;padding:0;background:none}
+.reviews .divider{display:none}
+h2{font-size:clamp(21px,3.7svh,29px);margin:0 0 6px}
+.intro{font-size:clamp(12px,1.95svh,15px);margin:0 auto 10px;line-height:1.15}
+.links{gap:8px}
+.review-link{min-height:44px;padding:7px 11px;font-size:16px;gap:10px}
+.icon{width:28px;height:28px}.yandex{font-size:23px}
+footer{position:absolute;bottom:4.8%;left:8%;width:84%;margin:0}
+footer p{font-size:clamp(11px,1.9svh,14px);margin:4px auto 6px}
+.heart{height:17px;width:19px}
+.brand{font-size:10px}
+@media(max-height:580px){.reviews{top:62%}h2{font-size:20px;margin-bottom:4px}.intro{font-size:11px;margin-bottom:6px}.review-link{min-height:40px;padding:5px 9px;font-size:14px}.links{gap:5px}.icon{width:25px;height:25px}.yandex{font-size:21px}footer{bottom:3%}footer p{font-size:11px;margin:3px auto 4px}.heart{height:14px}.eyebrow{margin-bottom:6px}}
+
+.reviews{top:62%}
+.reviews footer{position:static;width:100%;margin-top:8px}
+.reviews footer p{font-size:12px;line-height:1.1;margin:3px 0 5px}
+.reviews .heart{height:14px}
+@media(max-height:580px){.reviews{top:60%}h2{font-size:18px}.intro{font-size:10px}.review-link{min-height:36px;padding:4px 8px}.reviews footer{margin-top:4px}.reviews footer p{font-size:10px}.reviews .heart{height:11px}.brand{font-size:9px}}

@@ -1,81 +1,35 @@
 :root{color-scheme:light;--ink:#0b2944;--gold:#927027;--paper:#f5e6c9}
 *{box-sizing:border-box}
-body{margin:0;background:#e6d3b2;color:var(--ink);font-family:Georgia,'Times New Roman',serif;-webkit-text-size-adjust:100%}
-.page{position:relative;isolation:isolate;width:100%;max-width:520px;min-height:100svh;margin:auto;padding:calc(25px + env(safe-area-inset-top)) 20px calc(22px + env(safe-area-inset-bottom));background:var(--paper);text-align:center;overflow:hidden}
-.page:before{content:'';position:absolute;z-index:-1;inset:0 0 auto;aspect-ratio:852/1846;background:linear-gradient(to bottom,transparent 70%,var(--paper)),url('./assets/parchment.webp') center top/100% 100% no-repeat}
-.eyebrow{margin:5px 0 10px;font:600 clamp(11px,3.2vw,16px)/1.4 Georgia,serif;letter-spacing:.2em;text-transform:uppercase}
-.divider{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);width:66%;margin:0 auto 12px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--paper)}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:Georgia,'Times New Roman',serif}
+.page{position:relative;isolation:isolate;width:100%;max-width:520px;height:100vh;height:100svh;min-height:440px;margin:auto;display:flex;flex-direction:column;text-align:center;padding:calc(10px + env(safe-area-inset-top)) 20px calc(10px + env(safe-area-inset-bottom))}
+.page:before{content:'';position:absolute;inset:0;z-index:-1;background:url('./assets/parchment.webp') center top/100% 100% no-repeat}
+.hero{flex:1;min-height:130px;display:flex;flex-direction:column;align-items:center}
+.eyebrow{margin:0 0 7px;font-size:10px;line-height:1.4;letter-spacing:.18em;text-transform:uppercase}
+.divider{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold);width:64%;margin:0 auto 5px}
 .divider:before,.divider:after{content:'';height:1px;background:currentColor;flex:1}
-.divider svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
-h1{font-size:clamp(56px,17.2vw,89px);line-height:.87;font-style:italic;font-weight:500;letter-spacing:-.055em;margin:16px -5px 0;text-shadow:0 1px 9px #fff5dc90}
+.divider svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;flex:none}
+h1{font-size:clamp(36px,min(11.5vw,6.4svh),52px);line-height:.94;font-style:italic;font-weight:500;letter-spacing:-.045em;margin:7px 0 0;text-shadow:0 1px 9px #fff5dc90}
 h1 span{display:block}
-.flourish{width:58%;height:24px;margin-top:8px}
-.voyage{height:clamp(155px,47vw,244px)}
-h2{font-size:clamp(35px,10vw,52px);line-height:.98;letter-spacing:-.035em;font-weight:500;margin:8px 0 12px}
-.intro{font-size:clamp(16px,4.4vw,21px);font-style:italic;line-height:1.35;margin:0 0 22px}
-.links{display:grid;gap:12px}
-.review-link{display:flex;align-items:center;gap:14px;min-height:76px;padding:13px 17px;background:rgba(255,253,247,.95);border:1px solid #9c7b43;border-radius:19px;color:var(--ink);text-decoration:none;text-align:left;font:600 clamp(21px,5.6vw,29px)/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;box-shadow:0 4px 10px #48311112;touch-action:manipulation;-webkit-tap-highlight-color:#cfb47944}
-.review-link:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
-.review-link:hover{background:#fffdf8;border-color:var(--ink)}
-.review-link:active{transform:translateY(1px)}
-.icon{width:48px;height:48px;flex-shrink:0}
-.yandex{display:grid;place-items:center;background:#fa351f;color:white;border-radius:50%;font:400 39px/1 Arial,sans-serif}
-.arrow{width:27px;height:27px;flex-shrink:0;margin-left:auto;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-footer{margin-top:20px}
-.heart{width:28px;height:27px;fill:none;stroke:var(--gold);stroke-width:2}
-footer p{font-size:18px;line-height:1.25;font-style:italic;margin:5px 0 13px}
-.brand{display:flex;justify-content:center;align-items:center;gap:16px;font:500 15px/1.4 Arial,sans-serif;letter-spacing:.24em}
-.brand:before,.brand:after{content:'';height:1px;width:40px;background:var(--gold)}
-@media(min-width:521px){.page{box-shadow:0 0 70px #38260625}.small-break{display:none}}
-@media(max-width:350px){.page{padding-left:14px;padding-right:14px}.review-link{gap:10px;padding:12px;min-height:70px}.icon{width:42px;height:42px}.yandex{font-size:34px}}
-
-/* One-screen portrait layout. svh includes the space occupied by browser bars.
-   Keep natural overflow available for landscape and enlarged accessibility text. */
-.page{height:100vh;height:100svh;min-height:480px;display:flex;flex-direction:column;padding:calc(12px + env(safe-area-inset-top)) 20px calc(10px + env(safe-area-inset-bottom));overflow:visible}
-.page:before{height:100%;aspect-ratio:auto;background:linear-gradient(to bottom,transparent 57%,var(--paper) 92%),url('./assets/parchment.webp') center top/auto 100% no-repeat}
-.hero{flex:1;min-height:190px;display:flex;flex-direction:column;align-items:center}
-.eyebrow{font-size:clamp(10px,2.8vw,13px);margin:0 0 6px}
-.divider{margin:0 auto 5px;gap:10px}
-.divider svg{width:20px;height:20px}
-h1{font-size:clamp(44px,min(14vw,8svh),66px);margin:6px 0 0;line-height:.88}
-.flourish{height:15px;margin-top:4px;flex-shrink:0}
-.voyage{height:auto;min-height:12px;flex:1}
-.reviews{flex-shrink:0}
-h2{font-size:clamp(27px,min(8.2vw,4.6svh),36px);line-height:1;margin:4px 0 6px}
-.intro{font-size:clamp(14px,3.7vw,17px);margin:0 0 10px;line-height:1.2}
+.flourish{width:48%;height:14px;margin-top:6px;flex:none}
+.voyage{flex:1;min-height:12px}
+.reviews{flex:none;padding-top:8px;background:linear-gradient(to bottom,#f5e6c900,#f5e6c9c0 26%,#f5e6c9eb);border-radius:16px}
+h2{font-size:clamp(25px,min(7.5vw,4.2svh),32px);line-height:1.02;font-weight:500;letter-spacing:-.025em;margin:4px 0 8px}
+.intro{font-size:14px;font-style:italic;line-height:1.25;margin:0 auto 12px;max-width:320px}
 .intro br{display:none}
-.links{gap:8px}
-.review-link{min-height:58px;padding:9px 14px;gap:13px;border-radius:16px;font-size:clamp(20px,5.2vw,25px)}
-.icon{width:38px;height:38px}
-.yandex{font-size:31px}
-.arrow{width:24px;height:24px}
-footer{flex-shrink:0;margin-top:10px}
-.heart{width:22px;height:20px}
-footer p{font-size:15px;line-height:1.15;margin:3px 0 7px}
-footer p br{display:contents}
-footer p br:after{content:' '}
-.brand{font-size:12px;line-height:1.2}
-@media(max-height:620px){
- .page{padding-top:calc(8px + env(safe-area-inset-top));padding-bottom:calc(7px + env(safe-area-inset-bottom))}
- .hero{min-height:150px}
- h1{font-size:clamp(38px,7.5svh,46px);margin-top:3px}
- .hero .divider{display:none}
- .reviews{background:linear-gradient(to bottom,#f5e6c980,var(--paper) 45%);border-radius:12px}
- h2{font-size:27px}
- .intro{font-size:14px;margin-bottom:7px}
- .review-link{min-height:52px;padding:7px 12px}
- .icon{width:36px;height:36px}
- footer{margin-top:7px}
- footer p{font-size:14px;margin-bottom:5px}
-}
-@media(max-width:350px){.page{padding-left:14px;padding-right:14px}.review-link{gap:10px}}
-
-/* Quiet, compact controls, with a comfortable touch target. */
-.links{width:100%;max-width:350px;margin:0 auto;gap:9px}
-.review-link{min-height:54px;padding:10px 15px;gap:12px;border:1px solid #94743d66;border-radius:12px;background:rgba(255,253,246,.78);box-shadow:0 2px 5px #48311108;font-size:19px;font-weight:500;letter-spacing:-.02em;transition:background .15s ease,border-color .15s ease}
-.icon{width:32px;height:32px}
-.yandex{font-size:26px}
-.arrow{width:20px;height:20px;stroke-width:1.4;color:#866b3c}
+.links{display:grid;width:100%;max-width:340px;margin:auto;gap:9px}
+.review-link{display:flex;align-items:center;gap:12px;min-height:52px;padding:9px 14px;border:1px solid #94743d66;border-radius:12px;background:#fffdf6d9;box-shadow:0 2px 5px #48311108;color:var(--ink);text-decoration:none;text-align:left;font:500 18px/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;letter-spacing:-.02em;touch-action:manipulation;-webkit-tap-highlight-color:#cfb47944}
+.review-link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .review-link:hover{background:#fffaf0;border-color:#94743d}
 .review-link:active{background:#f2e5cc}
-@media(prefers-reduced-motion:reduce){.review-link{transition:none}}
+.icon{width:32px;height:32px;flex:none}
+.yandex{display:grid;place-items:center;background:#fa351f;color:white;border-radius:50%;font:400 26px/1 Arial,sans-serif}
+.arrow{width:20px;height:20px;flex:none;margin-left:auto;fill:none;stroke:#866b3c;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+footer{flex:none;margin-top:12px}
+.heart{display:block;margin:auto;width:22px;height:20px;fill:none;stroke:var(--gold);stroke-width:2}
+footer p{font-size:14px;line-height:1.2;font-style:italic;margin:5px auto 8px;max-width:340px}
+.brand{display:flex;justify-content:center;align-items:center;gap:14px;font:500 11px/1.2 Arial,sans-serif;letter-spacing:.24em}
+.brand:before,.brand:after{content:'';height:1px;width:32px;background:var(--gold)}
+@media(max-height:580px){.hero .divider{display:none}h1{font-size:36px;margin-top:3px}.eyebrow{margin-bottom:4px}.reviews{padding-top:4px}h2{font-size:25px;margin-bottom:5px}.intro{font-size:13px;margin-bottom:8px}.review-link{min-height:48px;padding:7px 12px}footer{margin-top:8px}footer p{font-size:13px;margin:4px auto 6px}}
+@media(max-width:350px){.page{padding-left:14px;padding-right:14px}.review-link{font-size:17px}.intro{max-width:260px}}
+@media(orientation:landscape) and (max-height:440px){.page{height:auto;min-height:100svh}.hero{min-height:160px}}

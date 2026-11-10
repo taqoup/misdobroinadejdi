@@ -3,9 +3,10 @@
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--paper)}
 body{margin:0;color:var(--ink);background:var(--paper);font-family:Georgia,'Times New Roman',serif}
 .page{position:relative;isolation:isolate;width:100%;max-width:520px;height:100vh;height:100svh;min-height:440px;margin:auto;display:flex;flex-direction:column;text-align:center;padding:calc(10px + env(safe-area-inset-top)) 20px calc(10px + env(safe-area-inset-bottom))}
-.page:before{content:'';position:absolute;inset:0;z-index:-1;background:url('./assets/parchment.webp') center top/100% 100% no-repeat}
+.page:before{content:'';position:absolute;inset:0;z-index:-1;background:url('./assets/parchment-hq.webp') center top/contain no-repeat}
+.page:after{content:'';position:absolute;inset:0;z-index:-2;background:url('./assets/parchment-hq.webp') center/cover no-repeat;filter:blur(18px);opacity:.45;clip-path:inset(0)}
 .hero{flex:1;min-height:130px;display:flex;flex-direction:column;align-items:center}
-.eyebrow{margin:0 0 7px;font-size:10px;line-height:1.4;letter-spacing:.18em;text-transform:uppercase}
+.eyebrow{margin:0 0 7px;font-size:12px;line-height:1.4;letter-spacing:.16em;text-transform:uppercase}
 .divider{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold);width:64%;margin:0 auto 5px}
 .divider:before,.divider:after{content:'';height:1px;background:currentColor;flex:1}
 .divider svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;flex:none}
@@ -13,9 +14,9 @@ h1{font-size:clamp(36px,min(11.5vw,6.4svh),52px);line-height:.94;font-style:ital
 h1 span{display:block}
 .flourish{width:48%;height:14px;margin-top:6px;flex:none}
 .voyage{flex:1;min-height:12px}
-.reviews{flex:none;padding-top:8px;background:linear-gradient(to bottom,#f5e6c900,#f5e6c9c0 26%,#f5e6c9eb);border-radius:16px}
+.reviews{flex:none;padding-top:8px;background:transparent}
 h2{font-size:clamp(25px,min(7.5vw,4.2svh),32px);line-height:1.02;font-weight:500;letter-spacing:-.025em;margin:4px 0 8px}
-.intro{font-size:14px;font-style:italic;line-height:1.25;margin:0 auto 12px;max-width:320px}
+.intro{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-style:normal;font-weight:500;letter-spacing:-.025em;line-height:1.25;margin:0 auto 12px;max-width:320px}
 .intro br{display:none}
 .links{display:grid;width:100%;max-width:340px;margin:auto;gap:9px}
 .review-link{display:flex;align-items:center;gap:12px;min-height:52px;padding:9px 14px;border:1px solid #94743d66;border-radius:12px;background:#fffdf6d9;box-shadow:0 2px 5px #48311108;color:var(--ink);text-decoration:none;text-align:left;font:500 18px/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;letter-spacing:-.02em;touch-action:manipulation;-webkit-tap-highlight-color:#cfb47944}
